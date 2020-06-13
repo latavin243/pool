@@ -8,7 +8,7 @@ type RenewableClient interface {
 
 type Pool interface {
 	Get() (RenewableClient, error)
-	FillClients(newClientNumber int)
+	FillClients(newClientNumber int) error
 
 	Len() int
 	Capacity() int
